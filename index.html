@@ -1,0 +1,2646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio | Passion for Stunning Digital Experiences</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6e48aa;
+            --secondary: #9d50bb;
+            --dark: #1e1e2c;
+            --light: #f9f9ff;
+            --accent: #ff6b6b;
+            --transition: all 0.3s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color:  linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+            width: 90%;
+            z-index: 2;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: white;
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .hi {
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 15px;
+            background-color: var(--accent);
+            bottom: 10px;
+            left: 0;
+            z-index: -1;
+            opacity: 0.5;
+            transform: scaleX(0.9);
+            transition: var(--transition);
+        }
+
+        .highlight:hover::after {
+            height: 20px;
+            opacity: 0.8;
+            transform: scaleX(1);
+        }
+
+        .desc {
+            font-size: 1.2rem;
+            max-width: 600px;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .shape-1 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: rgba(255, 255, 255, 0.1);
+            top: -50px;
+            right: -50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape-2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            background: rgba(255, 255, 255, 0.05);
+            bottom: -100px;
+            right: 100px;
+            animation: float 8s ease-in-out infinite 2s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 90%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .experience-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-timeline::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -12px;
+        }
+
+        .left::after {
+            right: -12px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .timeline-content p {
+            color: #666;
+        }
+
+        .timeline-date {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-tags {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .project-tag {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .project-info p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .project-links .demo {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .project-links .code {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .project-links a:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .achievement-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-6px);
+}
+
+.achievement-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.achievement-content {
+  padding: 16px;
+  text-align: left;
+}
+
+.achievement-icon {
+  font-size: 1.8rem;
+  color: #007BFF;
+  margin-bottom: 8px;
+}
+
+.achievement-date {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+
+        .contact-form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(110, 72, 170, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none; /* For mobile menu, you would add JavaScript to toggle */
+            }
+            
+            .experience-timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .left::after, 
+            .right::after {
+                left: 21px;
+            }
+            
+            .right {
+                left: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                align-items: center;
+                text-align: center;
+            }
+            
+            .desc {
+                text-align: center;
+            }
+            
+            .cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+
+
+        /* about me */
+        /* Base hidden state */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Active state when visible */
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+  /* ====== Gallery Section ====== */
+    .gallery-section {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .gallery-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    /* ====== Neon Glow Box Effect for Gallery Images ====== */
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+      box-shadow: inset 0 -10px 20px rgba(0, 51, 255, 0.5),
+                  inset 0 -20px 40px rgba(0, 102, 255, 0.4),
+                  0 10px 30px rgba(0, 51, 255, 0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba(0, 102, 255, 0.9),
+                  inset 0 -10px 30px rgba(0, 102, 255, 0.6);
+    }
+
+    /* Extra glowing layer */
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      right: 0;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, rgba(0, 102, 255, 0.8), transparent 70%);
+      filter: blur(25px);
+      opacity: 0.7;
+    }
+
+
+
+    .achievements-section {
+  position: relative;
+  padding: 5rem 0;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2d1b69, #8b5cf6, #a855f7);
+}
+
+/* Grid & Card Styling (same as before) */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+.achievement-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.achievement-content {
+  position: relative;
+  z-index: 2;
+}
+
+.achievement-card.has-image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.achievement-card.has-image .achievement-content {
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card.has-image:hover .achievement-content {
+  transform: translateY(0);
+}
+
+.achievement-card.has-image .achievement-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.achievement-date {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Background Animations ===== */
+.animated-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ring {
+  position: absolute;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  animation: rotateRing 20s linear infinite;
+}
+
+.ring1 {
+  width: 600px; height: 600px;
+  top: -200px; left: -200px;
+}
+.ring2 {
+  width: 800px; height: 800px;
+  bottom: -300px; right: -300px;
+  animation-duration: 30s;
+}
+
+@keyframes rotateRing {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Pulsing Glow */
+.pulse {
+  position: absolute;
+  width: 250px; height: 250px;
+  top: 40%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--accent), transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.3; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+}
+
+
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: var(--transition);
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 1.5rem;
+}
+
+.blog-content h3 {
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+}
+
+.blog-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  color: var(--secondary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.read-more:hover {
+  color: var(--accent);
+}
+
+
+/* Toggle button */
+.btn-toggle {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-toggle:hover { color: var(--accent); }
+
+/* Light theme */
+body.light-mode {
+  background: #f9f9ff;
+  color: #1e1e2c;
+}
+body.light-mode header { background: linear-gradient(135deg, #f5f5f5, #ddd); }
+body.light-mode .section-title h2 { color: #1e1e2c; }
+body.light-mode footer { background: #ddd; color: #000; }
+
+/* 🌞 Light Mode Styling */
+body.light-mode {
+  background: #f9f9ff;
+  color: #1e1e2c;
+}
+
+/* Header */
+body.light-mode header {
+  background: linear-gradient(135deg, #fefefe, #e6e6e6);
+  color: #1e1e2c;
+}
+
+/* Section titles */
+body.light-mode .section-title h2 {
+  color: #1e1e2c;
+}
+body.light-mode .section-title p {
+  color: #444;
+}
+
+/* Hero text */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode p {
+  color: #1e1e2c;
+}
+
+/* Buttons */
+body.light-mode .btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+body.light-mode .btn-secondary {
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+body.light-mode .btn-secondary:hover {
+  background-color: var(--primary);
+  color: rgb(12, 12, 12);
+}
+
+/* Navigation */
+body.light-mode .nav-links a {
+  color: #1e1e2c;
+}
+body.light-mode .nav-links a::after {
+  background: var(--primary);
+}
+
+/* Footer */
+body.light-mode footer {
+  background: #ddd;
+  color: #222;
+}
+body.light-mode .footer-links a,
+body.light-mode .social-links a {
+  color: #222;
+}
+
+
+
+
+
+         /* Admin Dashboard */
+     .admin-toggle {
+       position: fixed;
+       bottom: 20px;
+       right: 20px;
+       width: 56px;
+       height: 56px;
+       border-radius: 50%;
+       background: linear-gradient(135deg, var(--primary), var(--secondary));
+       color: #fff;
+       display: grid;
+       place-items: center;
+       font-size: 1.2rem;
+       border: none;
+       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+       cursor: pointer;
+       z-index: 9999;
+       opacity: 0.3;
+       transition: opacity 0.3s ease;
+     }
+     
+     .admin-toggle:hover {
+       opacity: 1;
+     }
+     
+     .admin-toggle.authenticated {
+       opacity: 1;
+       background: linear-gradient(135deg, #22c55e, #16a34a);
+     }
+     
+     /* Password Modal */
+     .password-modal {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.8);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       z-index: 10000;
+       opacity: 0;
+       visibility: hidden;
+       transition: all 0.3s ease;
+     }
+     
+     .password-modal.show {
+       opacity: 1;
+       visibility: visible;
+     }
+     
+     .password-form {
+       background: white;
+       padding: 2rem;
+       border-radius: 15px;
+       box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+       text-align: center;
+       max-width: 400px;
+       width: 90%;
+     }
+     
+     .password-form h3 {
+       margin-bottom: 1rem;
+       color: var(--primary);
+     }
+     
+     .password-form input {
+       width: 100%;
+       padding: 0.8rem;
+       border: 2px solid #ddd;
+       border-radius: 8px;
+       margin-bottom: 1rem;
+       font-size: 1rem;
+     }
+     
+     .password-form input:focus {
+       outline: none;
+       border-color: var(--primary);
+     }
+     
+     .password-form button {
+       background: var(--primary);
+       color: white;
+       border: none;
+       padding: 0.8rem 1.5rem;
+       border-radius: 8px;
+       cursor: pointer;
+       font-size: 1rem;
+       margin: 0 0.5rem;
+     }
+     
+     .password-form button:hover {
+       background: var(--secondary);
+     }
+     
+     .password-form .cancel-btn {
+       background: #6b7280;
+     }
+     
+     .password-form .cancel-btn:hover {
+       background: #4b5563;
+     }
+    .admin-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: min(420px, 92vw);
+      height: 100vh;
+      background: #ffffff;
+      color: #1e1e2c;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+      transform: translateX(100%);
+      transition: var(--transition);
+      z-index: 9998;
+      display: flex;
+      flex-direction: column;
+    }
+    .admin-panel.open { transform: translateX(0); }
+    .admin-header {
+      padding: 1rem 1.25rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .admin-body { padding: 1rem 1rem 2rem; overflow-y: auto; }
+    .admin-section { border: 1px solid #eee; border-radius: 10px; margin-bottom: 1rem; }
+    .admin-section summary { cursor: pointer; padding: 0.9rem 1rem; background:#fafafa; font-weight: 600; border-radius: 10px; }
+    .admin-section .content { padding: 0.8rem 1rem 1rem; }
+    .admin-grid { display: grid; grid-template-columns: 1fr; gap: 0.6rem; }
+    .admin-grid label { font-size: 0.9rem; font-weight: 600; color: #333; }
+         .admin-grid input, .admin-grid textarea { width: 100%; padding: 0.6rem 0.7rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem; }
+     .admin-grid input[type="file"] { 
+         padding: 0.5rem; 
+         border: 2px dashed #ddd; 
+         background: #fafafa;
+         cursor: pointer;
+     }
+     .admin-grid input[type="file"]:hover { 
+         border-color: var(--primary); 
+         background: #f0f8ff;
+     }
+    .admin-actions { margin-top: 0.6rem; display: flex; gap: 0.5rem; }
+    .btn-small { padding: 0.55rem 0.9rem; border: none; border-radius: 8px; background: var(--primary); color: #fff; cursor: pointer; }
+    .btn-ghost { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
+    @media (max-width: 480px) { .admin-toggle { bottom: 14px; right: 14px; } }
+
+  /* Internships Section */
+.internships-section {
+  position: relative;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.internships-section .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.internships-section .section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.internships-section .section-title p {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* Animated Background */
+.animated-bg .ring {
+  position: absolute;
+  border: 2px solid #6366f1;
+  border-radius: 50%;
+  animation: ringAnim 10s linear infinite;
+  opacity: 0.2;
+}
+
+.ring1 {
+  width: 250px;
+  height: 250px;
+  top: -100px;
+  left: -100px;
+}
+
+.ring2 {
+  width: 400px;
+  height: 400px;
+  bottom: -150px;
+  right: -150px;
+}
+
+.pulse {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 50%;
+  top: 20%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  animation: pulseAnim 6s ease-in-out infinite;
+}
+
+@keyframes ringAnim {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1.1); }
+}
+
+@keyframes pulseAnim {
+  0%, 100% { transform: scale(0.9); opacity: 0.4; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+}
+
+/* Internship Grid */
+.internships-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Internship Card */
+.internship-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internship-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.25);
+}
+
+.internship-image {
+  width: 100%;
+  height: 220px;         /* Adjust the height you want */
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.internship-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Makes the image cover without distortion */
+  display: block;
+}
+
+.internship-content {
+  padding: 20px;
+}
+
+.internship-content h3 {
+  font-size: 1.25rem;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.internship-content p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.internship-date {
+  font-size: 0.85rem;
+  color: #6366f1;
+  font-weight: 600;
+}
+
+/* Icon */
+.internship-icon {
+  color: #6366f1;
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .internships-section {
+    padding: 60px 15px;
+  }
+
+  .internships-section .section-title h2 {
+    font-size: 2rem;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="shape-1"></div>
+        <div class="shape-2"></div>
+        <div class="header-content">
+            <nav>
+                <a href="#" class="logo">Portfolio</a>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                    <button id="theme-toggle" class="btn-toggle"><i class="fas fa-moon"></i></button>
+
+                </div>
+
+            </nav>
+            
+            <div class="hero fade-in">
+                <span class="hi">Hi, my name is</span>
+                <h1 id="heroName" class="delay-1">Shah Mansi</h1>
+
+                <h2 id="heroTitle" class="highlight delay-2">Web Developer | Designer</h2>
+
+                <p id="heroDesc" class="desc delay-2">I build stunning and functional websites with a focus on immersive user experiences, leveraging modern JavaScript, CSS animations, and even 3D web technologies.</p>
+               <div class="cta delay-3">
+    <a href="#projects" class="btn btn-primary">View My Work....</a>
+
+    <a href="#contact" class="btn btn-secondary">Let's Collaborate</a>
+    <a href="resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+</div>
+
+            </div>
+        </div>
+    </header>
+
+  <section id="about">
+  <div class="container fade-in">
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>My journey through web development and passion for creating beautiful digital experiences is fueled by a desire to learn and grow.<br> I believe in the power of collaboration and the importance of understanding user needs to create impactful solutions.</p>
+
+    </div>
+    
+    <div class="about-content" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="ChatGPT Image Aug 13, 2025, 08_27_48 PM.png" alt="Portrait of a passionate web developer working on a laptop with code editor open" 
+             style="width: 50%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+      </div>
+      <div style="flex: 1; min-width: 300px;">
+        <h3 style="margin-bottom: 1rem; color: var(--primary);">Who I Am</h3>
+        <p style="margin-bottom: 1rem;">I'm a Computer Engineering graduate with a specialization in web technologies and interactive experiences...</p>
+        
+        <h3 style="margin-bottom: 1rem; color: var(--primary);">What I Do</h3>
+        <p style="margin-bottom: 1rem;">I specialize in crafting beautiful, functional websites that deliver exceptional user experiences...</p>
+        
+        <h3 style="margin-bottom: 1rem; color: var(--primary);">Why Work With Me</h3>
+        <p>Attention to detail, relentless curiosity, and a commitment to excellence drive everything I do...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="skills" style="background-color: #f5f5ff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+                <p>The tools and technologies I use to bring ideas to life</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML5, CSS3, JavaScript ,  CSS Animations</p>
+                </div>
+                
+                <div class="skill-card fade-in delay-1">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>PHP, Python</p>
+                </div>
+                
+                <div class="skill-card fade-in delay-2">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-Centered Design, Wireframing, Prototyping, Figma, Adobe XD</p>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="experience">
+        <div class="container">
+          
+            
+            <div class="experience-timeline">
+                <div class="timeline-item left fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Collage</div>
+                        <h3>Silver Oak University</h3>
+                        <p>Diploma in Computer Engineering.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right fade-in delay-1">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <h3>Frontend Developer </h3>
+                        <p>HTML, CSS, JavaScript, React.</p>
+                        <p>Developed responsive web applications and collaborated with designers to enhance user experience.</p>
+
+
+                    </div>
+                </div>
+                
+                <div class="timeline-item left fade-in delay-2">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Backend Development</div>
+                        <h3>Php, Python</h3>
+                        <p>Developed server-side applications and RESTful APIs using PHP and Python frameworks.</p>
+                        <p>Implemented database solutions with MySQL.</p>
+                        <p>Worked with cloud platforms like AWS for application deployment.</p>
+
+
+                    </div>
+                </div>
+                
+                <div class="timeline-item right fade-in delay-3">
+                    <div class="timeline-content">
+                        <div class="timeline-date">UI/UX</div>
+                        <h3>Freelance Designer</h3>
+                        <p>Figma, Adobe XD, Photoshop</p>
+                        <p>Worked with clients to create visually appealing and user-friendly designs.</p>
+
+                        <p>Designed user interfaces and experiences for various clients, focusing on usability and aesthetics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+                <p>A showcase of my best work in web development and design</p>
+            </div>
+            
+            <div id="projectsGrid" class="projects-grid">
+                <div class="project-card fade-in">
+                    <p> Dummy project </p>
+                    <div class="project-image">
+
+                        <img src="p1.png" alt="Interactive 3D product configurator showing various customizations for a couch">
+                        <div class="project-tags">
+                            <span class="project-tag">Html,css </span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>3D Furniture Configurator</h3>
+                        <p>An interactive 3D experience allowing users to customize furniture in real-time with different fabrics, colors, and configurations.</p>
+                        <div class="project-links">
+                            <a href=" http://notemake.com/" class="demo">Live Demo</a>
+                            <a href="#" class="code">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in delay-1">
+                    <div class="project-image">
+                        <img src="Screenshot 2025-08-31 135444.png" alt="Modern web application dashboard with interactive charts and data visualizations">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">js</span>
+                            <span class="project-tag">php</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CODE-TO-DIAGRAM</h3>
+                        <p>A responsive analytics platform featuring interactive charts, real-time data updates, and customizable reporting.</p>
+                        <div class="project-links">
+                            <a href="https://shahmansi8866.github.io/CODE-TO-DIAGRAM/" class="demo">Live Demo</a>
+                            <a href="https://github.com/shahMansi8866/CODE-TO-DIAGRAM/tree/main" class="code">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in delay-2">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400" alt="Mobile-responsive e-commerce website with smooth product browsing experience">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A fully responsive online store with product filtering, cart functionality, and smooth checkout process.</p>
+                        <div class="project-links">
+                            <a href="#" class="demo">Live Demo</a>
+                            <a href="#" class="code">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in delay-3">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400" alt="Immersive virtual art gallery with 3D navigation and artwork display">
+                        <div class="project-tags">
+                            <span class="project-tag">WebGL</span>
+                            <span class="project-tag">GLSL</span>
+                            <span class="project-tag">Three.js</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Virtual Art Gallery</h3>
+                        <p>An immersive 3D gallery experience that showcases artwork in interactive virtual spaces with realistic lighting.</p>
+                        <div class="project-links">
+                            <a href="#" class="demo">Live Demo</a>
+                            <a href="#" class="code">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="internships" class="internships-section">
+  <div class="animated-bg">
+    <div class="ring ring1"></div>
+    <div class="ring ring2"></div>
+    <div class="pulse"></div>
+  </div>
+  <div class="container">
+    <div class="section-title">
+      <h2>Internships</h2>
+      <p>Hands-on experiences that shaped my skills</p>
+    </div>
+
+    <div id="internshipsGrid" class="internships-grid">
+      
+      <!-- Internship 1 -->
+      <div class="internship-card fade-in">
+        <div class="internship-image">
+          <img src="WhatsApp Image 2025-08-30 at 15.24.54_3a8c0fbc.jpg" alt="Internship Company Logo">
+        </div>
+        <div class="internship-content">
+          <i class="fas fa-briefcase internship-icon"></i>
+          <h3>Web Development Intern in PHP – SoftSolutions</h3>
+          <p>Worked on front-end development using HTML, CSS, JavaScript and PHP. 
+             Contributed to building responsive web pages and improving UI/UX save data .</p>
+          <span class="internship-date">May 2024 – July 2024</span>
+        </div>
+      </div>
+
+       <div class="internship-card fade-in">
+        <div class="internship-image">
+          <img src="#" alt="Internship Company Logo">
+        </div>
+        <div class="internship-content">
+          <i class="fas fa-briefcase internship-icon"></i>
+          <h3>soon..</h3>
+          <p></p>
+          <span class="internship-date"></span>
+        </div>
+    </div>
+     
+
+   
+    </div>
+  </div>
+</section>
+
+
+    <section id="blog" style="background-color:#f5f5ff;">
+  <div class="container">
+    <div class="section-title">
+      <h2>Blog & Articles</h2>
+      <p>Sharing insights, tutorials, and my experiences in web development</p>
+    </div>
+
+    <div id="blogGrid" class="blog-grid">
+      <div class="blog-card fade-in">
+        <img src="https://picsum.photos/500/300?random=11" alt="Blog post preview">
+        <div class="blog-content">
+          <h3>Getting Started withAI day 1</h3>
+          <p>A beginner-friendly guide to AI and 3D graphics on the web.</p>
+          <a href="https://medium.com/@shahmamsi150/introduction-163797df5fb2" class="read-more">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card fade-in delay-1">
+        <img src="https://picsum.photos/500/300?random=12" alt="Blog post preview">
+        <div class="blog-content">
+          <h3>Designing for Performance</h3>
+          <p>Tips and techniques to build websites that load fast and deliver smooth user experiences.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card fade-in delay-2">
+        <img src="https://picsum.photos/500/300?random=13" alt="Blog post preview">
+        <div class="blog-content">
+          <h3>From Idea to Prototype</h3>
+          <p>How I turn raw ideas into working prototypes using Figma and rapid coding techniques.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements" class="achievements-section">
+  <div class="animated-bg">
+    <div class="ring ring1"></div>
+    <div class="ring ring2"></div>
+    <div class="pulse"></div>
+  </div>
+  <div class="container">
+    <div class="section-title">
+      <h2>Achievements & Certificates</h2>
+      <p>Milestones that showcase my journey and skills</p>
+    </div>
+
+    <div id="achievementsGrid" class="achievements-grid">
+      
+      <!-- Achievement 1 -->
+      <div class="achievement-card fade-in">
+        <div class="achievement-image">
+          <img src="hackthon1 copy.jpg" alt="Hackathon Certificate">
+        </div>
+        <div class="achievement-content">
+          <i class="fas fa-award achievement-icon"></i>
+          <h3>partipicate-Hackathon 2025</h3>
+          <span class="achievement-date">August-2025</span>
+        </div>
+      </div>
+
+      <!-- Achievement 2 -->
+      <div class="achievement-card fade-in delay-1">
+        <div class="achievement-image">
+          <img src="IEEE web certificate.jpeg" alt="Web Development Certificate">
+        </div>
+        <div class="achievement-content">
+          <i class="fas fa-certificate achievement-icon"></i>
+          <h3>Certified Web Developer</h3>
+          <p>Earned a professional certification in Full Stack Development.</p>
+          <span class="achievement-date">November 2023</span>
+        </div>
+      </div>
+
+      <!-- Achievement 3 -->
+      <div class="achievement-card fade-in delay-2">
+        <div class="achievement-image">
+          <img src="maths.jpg" alt="maths olympiad certificate">
+        </div>
+        <div class="achievement-content">
+          <i class="fas fa-graduation-cap achievement-icon"></i>
+          <h3>Maths</h3>
+          <p>Participated in the  Maths Olympiad in Baroda.</p>
+          <span class="achievement-date">27 Dec 2013</span>
+        </div>
+      </div>
+
+      <!-- Achievement 4 -->
+      <div class="achievement-card fade-in delay-1">
+        <div class="achievement-image">
+          <img src="python.jpg" alt="Python Certificate">
+        </div>
+        <div class="achievement-content">
+          <i class="fas fa-certificate achievement-icon"></i>
+          <h3>Certified Python Developer</h3>
+          <p>Earned a professional certification in Python Development.</p>
+          <span class="achievement-date">25 July 2025</span>
+        </div>
+      </div>
+
+
+      <!-- Achievement 5 -->
+      <div class="achievement-card fade-in delay-1">
+        <div class="achievement-image">
+          <img src="ux.jpg" alt="UX Design Certificate">
+        </div>
+        <div class="achievement-content">
+          <i class="fas fa-certificate achievement-icon"></i>
+          <h3>Certified UX Designer</h3>
+          <p>Earned a professional certification in User Experience Design.</p>
+          <span class="achievement-date">7 march 2024</span>
+        </div>
+      </div>
+  <!-- ✅ SEE MORE BUTTON HERE -->
+    <div class="see-more-container">
+      <button id="seeMoreBtn" class="see-more-btn">Tap to See More</button>
+    </div>
+    <style>
+        /* See More Button */
+.see-more-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.see-more-btn {
+  background: #6366f1;         /* Indigo shade */
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.3);
+}
+
+.see-more-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
+
+.see-more-btn:active {
+  transform: scale(0.95);
+}
+
+    </style>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".achievement-card");
+    const btn = document.getElementById("seeMoreBtn");
+
+    // Show only first 3 cards by default
+    cards.forEach((card, index) => {
+      if (index > 2) {
+        card.style.display = "none";
+      }
+    });
+
+    // Toggle on button click
+    btn.addEventListener("click", function () {
+      const hiddenCards = document.querySelectorAll(".achievement-card[style*='display: none']");
+      
+      if (hiddenCards.length > 0) {
+        // Show hidden cards
+        hiddenCards.forEach(card => {
+          card.style.display = "block";
+          card.classList.add("fade-in");  // apply animation
+        });
+        btn.textContent = "See Less";
+      } else {
+        // Hide back all after 3
+        cards.forEach((card, index) => {
+          if (index > 2) {
+            card.style.display = "none";
+          }
+        });
+        btn.textContent = "Tap to See More";
+      }
+    });
+  });
+</script>
+
+    
+
+
+    </div>
+  </div>
+</section>
+
+
+
+        <h2 style="color: var(--primary); font-size: xx-large; text-align: center;">Gallery</h2>
+    <h2 style="color: var(--primary); font-size: xx-large; text-align: center;"> some imgs</h2>
+  <section class="gallery-section">
+
+
+    <div class="gallery">
+      <div class="gallery-item"><img src="p1.png"></div>
+      <div class="gallery-item"><img src="https://picsum.photos/400/300?random=2"></div>
+      <div class="gallery-item"><img src="https://picsum.photos/400/300?random=3"></div>
+      <div class="gallery-item"><img src="https://picsum.photos/400/300?random=4"></div>
+    </div>
+  </section>
+
+    <section id="contact" style="background-color: #f5f5ff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>I'd love to hear about your project or discuss potential opportunities</p>
+            </div>
+            
+            <div class="contact-form fade-in">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <a href="#home" class="footer-logo">Shah Mansi</a>
+
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#gallery">Gallery</a>
+
+            </div>
+            <div class="footer-credits">
+                <p>Designed by Shah</p>
+            </div>
+
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-codepen"></i></a>
+            </div>
+
+            
+            
+            <div class="copyright">
+                <p>© <script>document.write(new Date().getFullYear())</script> Shah Mansi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+         <!-- Password Modal -->
+     <div id="passwordModal" class="password-modal">
+         <div class="password-form">
+             <h3>🔐 Admin Access</h3>
+             <p style="margin-bottom: 1rem; color: #666;">Enter your password to access the dashboard</p>
+             <input type="password" id="adminPassword" placeholder="Enter password" autocomplete="off">
+             <div>
+                 <button id="loginBtn" type="button">Login</button>
+                 <button id="cancelLogin" type="button" class="cancel-btn">Cancel</button>
+             </div>
+         </div>
+     </div>
+
+     <!-- Admin Toggle & Panel -->
+     <button id="adminToggle" class="admin-toggle" title="Admin Dashboard (Click to login)">✎</button>
+    <aside id="adminPanel" class="admin-panel" aria-hidden="true">
+                 <div class="admin-header">
+             <strong>Quick Dashboard</strong>
+             <div style="display: flex; gap: 0.5rem;">
+                 <button id="logoutBtn" class="btn-small btn-ghost" style="font-size: 0.8rem;">Logout</button>
+                 <button id="adminClose" class="btn-small btn-ghost">Close</button>
+             </div>
+         </div>
+        <div class="admin-body">
+            <details class="admin-section" open>
+                <summary>Hero Content</summary>
+                <div class="content">
+                    <form id="formHero" class="admin-grid">
+                        <label for="inHeroName">Name</label>
+                        <input id="inHeroName" type="text" placeholder="Your name">
+                        <label for="inHeroTitle">Title</label>
+                        <input id="inHeroTitle" type="text" placeholder="e.g., Web Developer | Designer">
+                        <label for="inHeroDesc">Description</label>
+                        <textarea id="inHeroDesc" rows="3" placeholder="Short hero description"></textarea>
+                        <div class="admin-actions">
+                            <button class="btn-small" type="submit">Save Hero</button>
+                        </div>
+                    </form>
+                </div>
+            </details>
+            <details class="admin-section">
+                <summary>About Content</summary>
+                <div class="content">
+                    <form id="formAbout" class="admin-grid">
+                        <label for="inAboutWho">Who I Am</label>
+                        <textarea id="inAboutWho" rows="2"></textarea>
+                        <label for="inAboutWhat">What I Do</label>
+                        <textarea id="inAboutWhat" rows="2"></textarea>
+                        <label for="inAboutWhy">Why Work With Me</label>
+                        <textarea id="inAboutWhy" rows="2"></textarea>
+                        <div class="admin-actions">
+                            <button class="btn-small" type="submit">Save About</button>
+                        </div>
+                    </form>
+                </div>
+            </details>
+                         <details class="admin-section">
+                 <summary>Add Project</summary>
+                 <div class="content">
+                     <form id="formProject" class="admin-grid">
+                         <label for="projImg">Image URL</label>
+                         <input id="projImg" type="url" placeholder="https://...">
+                         <label for="projTitle">Title</label>
+                         <input id="projTitle" type="text" placeholder="Project title">
+                         <label for="projDesc">Description</label>
+                         <textarea id="projDesc" rows="2"></textarea>
+                         <label for="projTags">Tags (comma separated)</label>
+                         <input id="projTags" type="text" placeholder="HTML,CSS,JS">
+                         <label for="projDemo">Demo Link</label>
+                         <input id="projDemo" type="url" placeholder="https://...">
+                         <label for="projCode">Code Link</label>
+                         <input id="projCode" type="url" placeholder="https://...">
+                         <div class="admin-actions">
+                             <button class="btn-small" type="submit">Add Project</button>
+                         </div>
+                     </form>
+                     <hr style="margin: 1rem 0; border: 1px solid #eee;">
+                     <form id="formProjectUpload" class="admin-grid">
+                         <label for="projImgFile">Or Upload Project Image from PC</label>
+                         <input id="projImgFile" type="file" accept="image/*">
+                         <div class="admin-actions">
+                             <button class="btn-small" type="submit">Upload Project Image</button>
+                         </div>
+                     </form>
+                 </div>
+             </details>
+                         <details class="admin-section">
+                 <summary>Add Blog</summary>
+                 <div class="content">
+                     <form id="formBlog" class="admin-grid">
+                         <label for="blogImg">Image URL</label>
+                         <input id="blogImg" type="url" placeholder="https://...">
+                         <label for="blogTitle">Title</label>
+                         <input id="blogTitle" type="text" placeholder="Post title">
+                         <label for="blogDesc">Summary</label>
+                         <textarea id="blogDesc" rows="2"></textarea>
+                         <label for="blogLink">Read More Link</label>
+                         <input id="blogLink" type="url" placeholder="https://...">
+                         <div class="admin-actions">
+                             <button class="btn-small" type="submit">Add Blog</button>
+                         </div>
+                     </form>
+                     <hr style="margin: 1rem 0; border: 1px solid #eee;">
+                     <form id="formBlogUpload" class="admin-grid">
+                         <label for="blogImgFile">Or Upload Blog Image from PC</label>
+                         <input id="blogImgFile" type="file" accept="image/*">
+                         <div class="admin-actions">
+                             <button class="btn-small" type="submit">Upload Blog Image</button>
+                         </div>
+                     </form>
+                 </div>
+             </details>
+                         <details class="admin-section">
+                 <summary>Add Gallery Image</summary>
+                 <div class="content">
+                     <form id="formGallery" class="admin-grid">
+                         <label for="galImg">Image URL</label>
+                         <input id="galImg" type="url" placeholder="https://...">
+                         <div class="admin-actions">
+                             <button class="btn-small" type="submit">Add Image</button>
+                         </div>
+                     </form>
+                     <hr style="margin: 1rem 0; border: 1px solid #eee;">
+                     <form id="formGalleryUpload" class="admin-grid">
+                         <label for="galImgFile">Or Upload from PC</label>
+                         <input id="galImgFile" type="file" accept="image/*">
+                         <div class="admin-actions">
+                             <button class="btn-small" type="submit">Upload Image</button>
+                         </div>
+                     </form>
+                 </div>
+             </details>
+                         <details class="admin-section">
+                 <summary>Add Achievement/Certificate</summary>
+                 <div class="content">
+                     <form id="formAch" class="admin-grid">
+                         <label for="achIcon">Icon class (FontAwesome)</label>
+                         <input id="achIcon" type="text" placeholder="fas fa-award">
+                         <label for="achTitle">Title</label>
+                         <input id="achTitle" type="text" placeholder="Achievement/Certificate title">
+                         <label for="achDesc">Description</label>
+                         <textarea id="achDesc" rows="2" placeholder="Brief description of the achievement"></textarea>
+                         <label for="achDate">Date (Optional)</label>
+                         <input id="achDate" type="text" placeholder="e.g., December 2023">
+                                                   <label for="achImg">Certificate Image URL</label>
+                          <input id="achImg" type="url" placeholder="https://... or leave empty for icon only">
+                          <div class="admin-actions">
+                              <button class="btn-small" type="submit">Add Achievement</button>
+                          </div>
+                      </form>
+                      <hr style="margin: 1rem 0; border: 1px solid #eee;">
+                      <form id="formAchUpload" class="admin-grid">
+                          <label for="achImgFile">Or Upload Certificate from PC</label>
+                          <input id="achImgFile" type="file" accept="image/*">
+                          <div class="admin-actions">
+                              <button class="btn-small" type="submit">Upload Certificate</button>
+                          </div>
+                      </form>
+                     </form>
+                 </div>
+             </details>
+            <div class="admin-actions" style="justify-content: space-between;">
+                <button id="exportData" class="btn-small btn-ghost">Export Data</button>
+                <button id="clearData" class="btn-small" style="background: var(--accent);">Clear All</button>
+            </div>
+        </div>
+    </aside>
+
+    <script>
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // You would normally send this data to a server
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Form submitted:', data);
+            
+            // Show success message
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.animation = 'fadeIn 1s ease-in forwards';
+                }
+            });
+        }
+
+        // Run once on page load
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
+        
+        // Run on scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+
+
+
+
+
+
+    // Scroll reveal for fade-in elements
+function revealOnScroll() {
+  const elements = document.querySelectorAll('.fade-in');
+  const triggerBottom = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('DOMContentLoaded', revealOnScroll);
+
+
+// Dark/Light mode toggle
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  toggleBtn.innerHTML = document.body.classList.contains('light-mode') 
+    ? '<i class="fas fa-sun"></i>' 
+    : '<i class="fas fa-moon"></i>';
+});
+
+                   // Admin Dashboard Functionality with Password Protection
+             const adminToggle = document.getElementById('adminToggle');
+       const adminPanel = document.getElementById('adminPanel');
+       const adminClose = document.getElementById('adminClose');
+       const logoutBtn = document.getElementById('logoutBtn');
+       const passwordModal = document.getElementById('passwordModal');
+       const adminPassword = document.getElementById('adminPassword');
+       const loginBtn = document.getElementById('loginBtn');
+       const cancelLogin = document.getElementById('cancelLogin');
+
+      // Set your password here (change this to your desired password)
+      const ADMIN_PASSWORD = 'shahmansi2024';
+      
+      let isAuthenticated = false;
+
+      // Check if user is already authenticated (session storage)
+      if (sessionStorage.getItem('adminAuthenticated') === 'true') {
+          isAuthenticated = true;
+          adminToggle.classList.add('authenticated');
+      }
+
+      // Show password modal when admin toggle is clicked
+      adminToggle.addEventListener('click', () => {
+          if (!isAuthenticated) {
+              passwordModal.classList.add('show');
+              adminPassword.focus();
+          } else {
+              adminPanel.classList.toggle('open');
+              adminPanel.setAttribute('aria-hidden', !adminPanel.classList.contains('open'));
+          }
+      });
+
+      // Handle login
+      loginBtn.addEventListener('click', () => {
+          const password = adminPassword.value;
+          if (password === ADMIN_PASSWORD) {
+              isAuthenticated = true;
+              sessionStorage.setItem('adminAuthenticated', 'true');
+              adminToggle.classList.add('authenticated');
+              passwordModal.classList.remove('show');
+              adminPassword.value = '';
+              adminPanel.classList.add('open');
+              adminPanel.setAttribute('aria-hidden', 'false');
+          } else {
+              alert('❌ Incorrect password! Please try again.');
+              adminPassword.value = '';
+              adminPassword.focus();
+          }
+      });
+
+      // Handle cancel login
+      cancelLogin.addEventListener('click', () => {
+          passwordModal.classList.remove('show');
+          adminPassword.value = '';
+      });
+
+      // Handle Enter key in password field
+      adminPassword.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+              loginBtn.click();
+          }
+      });
+
+      // Close password modal when clicking outside
+      passwordModal.addEventListener('click', (e) => {
+          if (e.target === passwordModal) {
+              passwordModal.classList.remove('show');
+              adminPassword.value = '';
+          }
+      });
+
+             adminClose.addEventListener('click', () => {
+           adminPanel.classList.remove('open');
+           adminPanel.setAttribute('aria-hidden', 'true');
+       });
+
+       // Logout functionality
+       logoutBtn.addEventListener('click', () => {
+           isAuthenticated = false;
+           sessionStorage.removeItem('adminAuthenticated');
+           adminToggle.classList.remove('authenticated');
+           adminPanel.classList.remove('open');
+           adminPanel.setAttribute('aria-hidden', 'true');
+           alert('✅ Logged out successfully!');
+       });
+
+     // Load saved data on page load
+     document.addEventListener('DOMContentLoaded', () => {
+         loadSavedData();
+     });
+
+     // Hero form handling
+     document.getElementById('formHero').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const name = document.getElementById('inHeroName').value;
+         const title = document.getElementById('inHeroTitle').value;
+         const desc = document.getElementById('inHeroDesc').value;
+         
+         if (name) document.getElementById('heroName').textContent = name;
+         if (title) document.getElementById('heroTitle').textContent = title;
+         if (desc) document.getElementById('heroDesc').textContent = desc;
+         
+         saveData('hero', { name, title, desc });
+         e.target.reset();
+     });
+
+     // About form handling
+     document.getElementById('formAbout').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const who = document.getElementById('inAboutWho').value;
+         const what = document.getElementById('inAboutWhat').value;
+         const why = document.getElementById('inAboutWhy').value;
+         
+         if (who) document.getElementById('aboutWho').textContent = who;
+         if (what) document.getElementById('aboutWhat').textContent = what;
+         if (why) document.getElementById('aboutWhy').textContent = why;
+         
+         saveData('about', { who, what, why });
+         e.target.reset();
+     });
+
+     // Project form handling
+     document.getElementById('formProject').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const project = {
+             img: document.getElementById('projImg').value,
+             title: document.getElementById('projTitle').value,
+             desc: document.getElementById('projDesc').value,
+             tags: document.getElementById('projTags').value,
+             demo: document.getElementById('projDemo').value,
+             code: document.getElementById('projCode').value
+         };
+         
+         addProject(project);
+         saveData('projects', getProjects());
+         e.target.reset();
+     });
+
+     // Project upload handling
+     document.getElementById('formProjectUpload').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const fileInput = document.getElementById('projImgFile');
+         const file = fileInput.files[0];
+         if (file) {
+             const reader = new FileReader();
+             reader.onload = function(e) {
+                 // Update the project image URL field with the uploaded image
+                 document.getElementById('projImg').value = e.target.result;
+                 alert('Project image uploaded! Now fill in the project details and click "Add Project".');
+             };
+             reader.readAsDataURL(file);
+         }
+         e.target.reset();
+     });
+
+     // Blog form handling
+     document.getElementById('formBlog').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const blog = {
+             img: document.getElementById('blogImg').value,
+             title: document.getElementById('blogTitle').value,
+             desc: document.getElementById('blogDesc').value,
+             link: document.getElementById('blogLink').value
+         };
+         
+         addBlog(blog);
+         saveData('blogs', getBlogs());
+         e.target.reset();
+     });
+
+     // Blog upload handling
+     document.getElementById('formBlogUpload').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const fileInput = document.getElementById('blogImgFile');
+         const file = fileInput.files[0];
+         if (file) {
+             const reader = new FileReader();
+             reader.onload = function(e) {
+                 // Update the blog image URL field with the uploaded image
+                 document.getElementById('blogImg').value = e.target.result;
+                 alert('Blog image uploaded! Now fill in the blog details and click "Add Blog".');
+             };
+             reader.readAsDataURL(file);
+         }
+         e.target.reset();
+     });
+
+     // Gallery form handling
+     document.getElementById('formGallery').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const imgUrl = document.getElementById('galImg').value;
+         if (imgUrl) {
+             addGalleryImage(imgUrl);
+             saveData('gallery', getGalleryImages());
+         }
+         e.target.reset();
+     });
+
+     // Gallery upload handling
+     document.getElementById('formGalleryUpload').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const fileInput = document.getElementById('galImgFile');
+         const file = fileInput.files[0];
+         if (file) {
+             const reader = new FileReader();
+             reader.onload = function(e) {
+                 addGalleryImage(e.target.result);
+                 saveData('gallery', getGalleryImages());
+             };
+             reader.readAsDataURL(file);
+         }
+         e.target.reset();
+     });
+
+     // Achievement form handling
+     document.getElementById('formAch').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const achievement = {
+             icon: document.getElementById('achIcon').value,
+             title: document.getElementById('achTitle').value,
+             desc: document.getElementById('achDesc').value,
+             date: document.getElementById('achDate').value,
+             img: document.getElementById('achImg').value
+         };
+         
+         addAchievement(achievement);
+         saveData('achievements', getAchievements());
+         e.target.reset();
+     });
+
+     // Achievement upload handling
+     document.getElementById('formAchUpload').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const fileInput = document.getElementById('achImgFile');
+         const file = fileInput.files[0];
+         if (file) {
+             const reader = new FileReader();
+             reader.onload = function(e) {
+                 // Get current form values
+                 const achievement = {
+                     icon: document.getElementById('achIcon').value || 'fas fa-certificate',
+                     title: document.getElementById('achTitle').value || 'Certificate',
+                     desc: document.getElementById('achDesc').value || 'Uploaded certificate',
+                     date: document.getElementById('achDate').value || new Date().toLocaleDateString(),
+                     img: e.target.result
+                 };
+                 
+                 addAchievement(achievement);
+                 saveData('achievements', getAchievements());
+             };
+             reader.readAsDataURL(file);
+         }
+         e.target.reset();
+     });
+
+     // Export data
+     document.getElementById('exportData').addEventListener('click', () => {
+         const data = {
+             hero: getData('hero'),
+             about: getData('about'),
+             projects: getData('projects'),
+             blogs: getData('blogs'),
+             gallery: getData('gallery'),
+             achievements: getData('achievements')
+         };
+         
+         const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+         const url = URL.createObjectURL(blob);
+         const a = document.createElement('a');
+         a.href = url;
+         a.download = 'portfolio-data.json';
+         a.click();
+         URL.revokeObjectURL(url);
+     });
+
+     // Clear all data
+     document.getElementById('clearData').addEventListener('click', () => {
+         if (confirm('Are you sure you want to clear all saved data?')) {
+             localStorage.clear();
+             location.reload();
+         }
+     });
+
+     // Helper functions
+     function saveData(key, data) {
+         localStorage.setItem(`portfolio_${key}`, JSON.stringify(data));
+     }
+
+     function getData(key) {
+         const data = localStorage.getItem(`portfolio_${key}`);
+         return data ? JSON.parse(data) : null;
+     }
+
+     function loadSavedData() {
+         // Load hero data
+         const heroData = getData('hero');
+         if (heroData) {
+             if (heroData.name) document.getElementById('heroName').textContent = heroData.name;
+             if (heroData.title) document.getElementById('heroTitle').textContent = heroData.title;
+             if (heroData.desc) document.getElementById('heroDesc').textContent = heroData.desc;
+         }
+
+         // Load about data
+         const aboutData = getData('about');
+         if (aboutData) {
+             if (aboutData.who) document.getElementById('aboutWho').textContent = aboutData.who;
+             if (aboutData.what) document.getElementById('aboutWhat').textContent = aboutData.what;
+             if (aboutData.why) document.getElementById('aboutWhy').textContent = aboutData.why;
+         }
+
+         // Load projects
+         const projects = getData('projects') || [];
+         projects.forEach(project => addProject(project, false));
+
+         // Load blogs
+         const blogs = getData('blogs') || [];
+         blogs.forEach(blog => addBlog(blog, false));
+
+         // Load gallery images
+         const galleryImages = getData('gallery') || [];
+         galleryImages.forEach(imgUrl => addGalleryImage(imgUrl, false));
+
+         // Load achievements
+         const achievements = getData('achievements') || [];
+         achievements.forEach(achievement => addAchievement(achievement, false));
+     }
+
+     function addProject(project, save = true) {
+         const projectsGrid = document.getElementById('projectsGrid');
+         const projectCard = document.createElement('div');
+         projectCard.className = 'project-card fade-in';
+         
+         projectCard.innerHTML = `
+             <div class="project-image">
+                 <img src="${project.img || 'https://placehold.co/600x400'}" alt="${project.title}">
+                 <div class="project-tags">
+                     ${project.tags ? project.tags.split(',').map(tag => `<span class="project-tag">${tag.trim()}</span>`).join('') : ''}
+                 </div>
+             </div>
+             <div class="project-info">
+                 <h3>${project.title}</h3>
+                 <p>${project.desc}</p>
+                 <div class="project-links">
+                     ${project.demo ? `<a href="${project.demo}" class="demo" target="_blank">Live Demo</a>` : ''}
+                     ${project.code ? `<a href="${project.code}" class="code" target="_blank">View Code</a>` : ''}
+                 </div>
+             </div>
+         `;
+         
+         projectsGrid.appendChild(projectCard);
+     }
+
+     function addBlog(blog, save = true) {
+         const blogGrid = document.getElementById('blogGrid');
+         const blogCard = document.createElement('div');
+         blogCard.className = 'blog-card fade-in';
+         
+         blogCard.innerHTML = `
+             <img src="${blog.img || 'https://picsum.photos/500/300?random=' + Math.floor(Math.random() * 100)}" alt="Blog post preview">
+             <div class="blog-content">
+                 <h3>${blog.title}</h3>
+                 <p>${blog.desc}</p>
+                 ${blog.link ? `<a href="${blog.link}" class="read-more" target="_blank">Read More →</a>` : ''}
+             </div>
+         `;
+         
+         blogGrid.appendChild(blogCard);
+     }
+
+     function addGalleryImage(imgUrl, save = true) {
+         const galleryGrid = document.getElementById('galleryGrid');
+         const galleryItem = document.createElement('div');
+         galleryItem.className = 'gallery-item';
+         
+         galleryItem.innerHTML = `<img src="${imgUrl}" alt="Gallery image">`;
+         galleryGrid.appendChild(galleryItem);
+     }
+
+     function addAchievement(achievement, save = true) {
+         const achievementsGrid = document.getElementById('achievementsGrid');
+         const achievementCard = document.createElement('div');
+         achievementCard.className = `achievement-card fade-in ${achievement.img ? 'has-image' : ''}`;
+         
+         if (achievement.img) {
+             achievementCard.innerHTML = `
+                 <img src="${achievement.img}" alt="${achievement.title}" class="achievement-image">
+                 <div class="achievement-content">
+                     <i class="${achievement.icon || 'fas fa-award'} achievement-icon"></i>
+                     <h3>${achievement.title}</h3>
+                     <p>${achievement.desc}</p>
+                     ${achievement.date ? `<span class="achievement-date">${achievement.date}</span>` : ''}
+                 </div>
+             `;
+         } else {
+             achievementCard.innerHTML = `
+                 <div class="achievement-content">
+                     <i class="${achievement.icon || 'fas fa-award'} achievement-icon"></i>
+                     <h3>${achievement.title}</h3>
+                     <p>${achievement.desc}</p>
+                     ${achievement.date ? `<span class="achievement-date">${achievement.date}</span>` : ''}
+                 </div>
+             `;
+         }
+         
+         achievementsGrid.appendChild(achievementCard);
+     }
+
+     function getProjects() {
+         const projects = [];
+         document.querySelectorAll('#projectsGrid .project-card').forEach(card => {
+             const title = card.querySelector('h3').textContent;
+             const desc = card.querySelector('p').textContent;
+             const img = card.querySelector('img').src;
+             const tags = Array.from(card.querySelectorAll('.project-tag')).map(tag => tag.textContent).join(', ');
+             const demo = card.querySelector('.demo')?.href || '';
+             const code = card.querySelector('.code')?.href || '';
+             projects.push({ title, desc, img, tags, demo, code });
+         });
+         return projects;
+     }
+
+     function getBlogs() {
+         const blogs = [];
+         document.querySelectorAll('#blogGrid .blog-card').forEach(card => {
+             const title = card.querySelector('h3').textContent;
+             const desc = card.querySelector('p').textContent;
+             const img = card.querySelector('img').src;
+             const link = card.querySelector('.read-more')?.href || '';
+             blogs.push({ title, desc, img, link });
+         });
+         return blogs;
+     }
+
+     function getGalleryImages() {
+         const images = [];
+         document.querySelectorAll('#galleryGrid .gallery-item img').forEach(img => {
+             images.push(img.src);
+         });
+         return images;
+     }
+
+     function getAchievements() {
+         const achievements = [];
+         document.querySelectorAll('#achievementsGrid .achievement-card').forEach(card => {
+             const icon = card.querySelector('.achievement-icon').className;
+             const title = card.querySelector('h3').textContent;
+             const desc = card.querySelector('p').textContent;
+             const date = card.querySelector('.achievement-date')?.textContent || '';
+             const img = card.querySelector('.achievement-image')?.src || '';
+             achievements.push({ icon, title, desc, date, img });
+         });
+         return achievements;
+     }
+     </script>
+</body>
+</html>
